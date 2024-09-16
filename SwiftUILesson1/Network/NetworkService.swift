@@ -7,11 +7,9 @@
 
 import Foundation
 
-class NetworkService{
+class NetworkService {
     
     var configuration: URLSessionConfiguration?
-    
-
     
     func request<T: Decodable>(urlRequest: URLRequest, completion: @escaping (Result<T, Error>) -> Void) {
         URLSession.shared.dataTask(with: urlRequest) { data, response, error in
@@ -28,15 +26,13 @@ class NetworkService{
             let decoder = JSONDecoder()
 
             do {
-                let decodedData = try decoder.decode([DMBreedsInfo].self, from: data)
-                completion(.success(decodedData as! T))
+                let decodedData = try decoder.decode(T.self, from: data)
+                completion(.success(decodedData))
             } catch let decodingError {
                 print("Failed to decode JSON: \(decodingError.localizedDescription)")
-//                if let dataString = String(data: data, encoding: .utf8) {
-////                    print("Received data: \(dataString)")
-//                }
                 completion(.failure(decodingError))
             }
         }.resume()
     }
 }
+
