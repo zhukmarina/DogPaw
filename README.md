@@ -8,9 +8,9 @@ This is an iOS application built with SwiftUI that allows users to explore and i
 
 - **Search Functionality**: A search bar enables users to easily find specific dog breeds by name.
   
-  <img src="https://github.com/user-attachments/assets/fc0462a7-346b-4c87-a384-7fa5091b4125" width="330" title="search">
-  <img src="https://github.com/user-attachments/assets/8f5f76f4-bf1d-4bc4-9a17-1a259e87d51f" width="330" title="search">
-  <img src="https://github.com/user-attachments/assets/0220ef75-e5f5-4a50-90e3-7333384bc24e" width="330" title="search"> 
+  <img src="https://github.com/user-attachments/assets/fc0462a7-346b-4c87-a384-7fa5091b4125" width="230" title="search">
+  <img src="https://github.com/user-attachments/assets/8f5f76f4-bf1d-4bc4-9a17-1a259e87d51f" width="230" title="search">
+  <img src="https://github.com/user-attachments/assets/0220ef75-e5f5-4a50-90e3-7333384bc24e" width="230" title="search"> 
 
 - **Add to Favorites**: Users can add breeds to their favorites list, with API integration to save and retrieve favorite data.
   <img src="https://github.com/user-attachments/assets/fcaee076-1942-4c85-bc41-3fc45739ba1d" width="330" title="search">
