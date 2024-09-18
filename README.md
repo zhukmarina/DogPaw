@@ -3,7 +3,7 @@ This is an iOS application built with SwiftUI that allows users to explore and i
 
 ## Features
 - **Voting Dogs**: Users can view dog breeds one by one, with the ability to quickly switch between them using a swipe **carousel** or through **like/dislike** buttons.
- <img src="https://github.com/user-attachments/assets/ac2e14fa-14bc-4eec-9ce4-56fa395f07a1" width="330" title="DMV Test Prep"> 
+ <img src="https://github.com/user-attachments/assets/ac2e14fa-14bc-4eec-9ce4-56fa395f07a1" width="330" title="Voting"> 
  
 
 - **Search Functionality**: A search bar enables users to easily find specific dog breeds by name.
@@ -13,8 +13,8 @@ This is an iOS application built with SwiftUI that allows users to explore and i
   <img src="https://github.com/user-attachments/assets/0220ef75-e5f5-4a50-90e3-7333384bc24e" width="230" title="search"> 
 
 - **Add to Favorites**: Users can add breeds to their favorites list, with API integration to save and retrieve favorite data.
-  <img src="https://github.com/user-attachments/assets/fcaee076-1942-4c85-bc41-3fc45739ba1d" width="330" title="search">
-  <img src="https://github.com/user-attachments/assets/ad9282f3-b8ef-49e1-b97e-e313199aa4a2" width="330" title="search">
+  <img src="https://github.com/user-attachments/assets/fcaee076-1942-4c85-bc41-3fc45739ba1d" width="330" title="Favorites">
+  <img src="https://github.com/user-attachments/assets/ad9282f3-b8ef-49e1-b97e-e313199aa4a2" width="330" title="Favorites">
 
 
 - **Asynchronous Data Loading**: Dog breed data and images are loaded asynchronously, with progress indicators displayed during loading times.
