@@ -10,7 +10,7 @@ struct FavoritesView: View {
         NavigationView {
             List(viewModel.favorites, id: \.id) { favorite in
                 VStack(alignment: .leading) {
-                    // Відображення зображення собаки
+                   
                     if let imageUrl = URL(string: favorite.image?.url ?? "") {
                         AsyncImage(url: imageUrl) { image in
                             image

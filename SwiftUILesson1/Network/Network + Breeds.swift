@@ -191,7 +191,7 @@ extension NetworkService: NetworkServiceBreeds {
                 }
                 
                 if let httpResponse = response as? HTTPURLResponse, httpResponse.statusCode == 200 {
-                    completion(true, nil)  // Успішне видалення
+                    completion(true, nil)  
                 } else {
                     let statusCode = (response as? HTTPURLResponse)?.statusCode ?? 500
                     let errorDescription = HTTPURLResponse.localizedString(forStatusCode: statusCode)

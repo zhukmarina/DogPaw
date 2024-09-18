@@ -31,11 +31,11 @@ struct Carusel: View {
             }
         }
         .onAppear {
-            // Завантажуємо нові зображення при зміні breedID
+          
             viewModel.getImageForCarousel(breedID: breedID)
         }
         .onChange(of: breedID) { newBreedID in
-            // Оновлюємо карусель при зміні породи
+           
             viewModel.getImageForCarousel(breedID: newBreedID)
         }
     }

@@ -58,10 +58,10 @@ struct BreedsListView: View {
             
             Spacer()
             
-            // Відображення вибраної породи або скелетону
+           
             VStack {
                 if !selectedBreed.isEmpty {
-                    // Відображення вибраної породи
+                  
                     Text("\(selectedBreed)")
                         .font(.custom("Papyrus", size: 24))
                         .foregroundColor(.purple)
@@ -78,7 +78,7 @@ struct BreedsListView: View {
                                     .frame(height: 300)
                                     .clipped()
                             } placeholder: {
-                                // Placeholder для зображення
+                             
                                 ZStack {
                                     Color.gray.opacity(0.1)
                                         .frame(height: 200)
@@ -131,7 +131,7 @@ struct BreedsListView: View {
                         }
                     }
                 } else {
-                    // Скелетон для порожнього стану
+                    
                     VStack {
                         Color.gray.opacity(0.1)
                             .frame(height: 300)

@@ -5,8 +5,8 @@ struct DogsListView: View {
     @StateObject private var viewModel = DogsViewModel()
     @State private var isPressed = false
     @State private var currentIndex: Int = 0
-    @State private var isLoading = true  // Для основного завантаження
-    @State private var isCaruselLoading = false  // Для завантаження каруселі
+    @State private var isLoading = true
+    @State private var isCaruselLoading = false
     
     var filteredDogs: [DMRandomDogs] {
         return viewModel.dogs.filter { !$0.breeds.isEmpty }
@@ -15,7 +15,7 @@ struct DogsListView: View {
     var body: some View {
         VStack {
             if isLoading {
-                // Індикатор завантаження для початкового стану
+               
                 ProgressView()
                     .progressViewStyle(CircularProgressViewStyle())
                     .scaleEffect(2.0)
@@ -24,14 +24,14 @@ struct DogsListView: View {
                 VStack {
                     if let breed = dog.breeds.first {
                         if isCaruselLoading {
-                            // Індикатор завантаження під час перемикання каруселі
+                           
                             ProgressView()
                                 .progressViewStyle(CircularProgressViewStyle())
                                 .scaleEffect(1.5)
                                 .padding()
                                 .frame(height: 300)
                         } else {
-                            // Оновлюємо карусель з новим breedID
+                       
                             Carusel(breedID: breed.id)
                                 .frame(height: 300)
                             Text("\(breed.name ?? "")")
@@ -44,18 +44,18 @@ struct DogsListView: View {
                         }
                     }
                     
-                    // Кнопки для перемикання та додавання в улюблені
+                  
                     HStack {
                         Button(action: {
-                            // Перевірка, чи є наступна собака
+                           
                             if currentIndex < filteredDogs.count - 1 {
                                 isCaruselLoading = true
                                 currentIndex += 1
                             } else {
                                 isCaruselLoading = true
-                                currentIndex = 0 // Повернутись до початку, якщо це остання собака
+                                currentIndex = 0
                             }
-                            // Затримка для імітації завантаження каруселі
+                            
                             DispatchQueue.main.asyncAfter(deadline: .now() + 1.0) {
                                 isCaruselLoading = false
                             }
@@ -92,7 +92,7 @@ struct DogsListView: View {
                                     isCaruselLoading = true
                                     currentIndex = 0
                                 }
-                                // Імітація затримки для завантаження
+                               
                                 DispatchQueue.main.asyncAfter(deadline: .now() + 1.0) {
                                     isCaruselLoading = false
                                 }
@@ -112,7 +112,7 @@ struct DogsListView: View {
         .onAppear {
             viewModel.getRandomDogs()
             viewModel.loadFavorites()
-            // Коли дані завантажені, знімаємо індикатор завантаження
+            
             DispatchQueue.main.asyncAfter(deadline: .now() + 1.5) {
                 isLoading = false
             }
